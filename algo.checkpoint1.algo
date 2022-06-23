@@ -1,0 +1,21 @@
+ALGORITHM count
+
+VAR
+    i,nv,l:INTEGER:=0;
+    nw:INTEGER:=1;
+    st:STRING;
+   
+BEGIN
+READ(st)
+    while (st[i]<> '.') do 
+    i:=i+1
+    l++
+    if (st[i]=' ') then
+    nw:=nw+1;
+    ENDIF
+    if st[i] in [ 'a','A','e','E','i','I','u','U','o','O','y','Y'] then
+    nv:=nv+1
+    ENDIF
+    ENDWHILE
+Write ("this is the number of  : words in this sentence , vowels & caracters :",nw,nv,l)
+END
